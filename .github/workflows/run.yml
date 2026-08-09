@@ -19,3 +19,5 @@ jobs:
         env:
           GLADOS: ${{ secrets.GLADOS }}
           NOTIFY: ${{ secrets.NOTIFY }}
+      - name: Keepalive Workflow
+        uses: gautamkrishnar/keepalive-workflow@v2
