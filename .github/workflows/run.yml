@@ -19,5 +19,7 @@ jobs:
         env:
           GLADOS: ${{ secrets.GLADOS }}
           NOTIFY: ${{ secrets.NOTIFY }}
-      - name: Keepalive Workflow
-        uses: gautamkrishnar/keepalive-workflow@v2
+      - name: Keepalive via API
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh api -X PUT /repos/${{ github.repository }}/actions/workflows/run.yml/enable
