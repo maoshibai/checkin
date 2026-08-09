@@ -23,6 +23,8 @@ GitHub Actions 实现 [GLaDOS][glados] 自动签到
 1. 如需推送通知, 可配置 Secret `NOTIFY`, 已支持:
     1. [WxPusher][wxpusher]: 格式 `wxpusher:{token}:{uid}`
     1. [PushPlus][pushplus]: 格式 `pushplus:{token}`
+    1. [Bark][bark]: 格式 `bark:{key}`
+    1. [企业微信][qyweixin]: 格式 `qyweixin:{key}`
     1. Console: 格式 `console:log`, 作为日志输出, 一般用于调试
     1. 如需配置多个, 可以写为多行, 每行写一个
 
@@ -34,3 +36,5 @@ GitHub Actions 实现 [GLaDOS][glados] 自动签到
 [crontab]: https://crontab.guru/
 [pushplus]: https://www.pushplus.plus/
 [wxpusher]: https://wxpusher.zjiecode.com/
+[bark]: https://github.com/Finb/Bark
+[qyweixin]: https://developer.work.weixin.qq.com/document/path/91770

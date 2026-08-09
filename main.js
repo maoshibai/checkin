@@ -68,6 +68,15 @@ const notify = async (notice) => {
             template: 'markdown',
           }),
         })
+      } else if (option.startsWith('bark:')) {
+        await fetch(`https://api.day.app/${option.split(':')[1]}`, {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({
+            title: notice[0],
+            body: notice.slice(1).join('\n'),
+          }),
+        })
       } else if (option.startsWith('qyweixin:')) {
         const qyweixinToken = option.split(':')[1]
         const qyweixinNotifyRebotUrl = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=' + qyweixinToken;
